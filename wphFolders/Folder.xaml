@@ -1,0 +1,29 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="wphFolders.Folder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    xmlns:local="clr-namespace:ControlTiltEffect"
+    local:TiltEffect.IsTiltEnabled="True"
+    mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
+    shell:SystemTray.IsVisible="True" Loaded="LayoutRoot_Loaded">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="105"/>
+            <RowDefinition Height="663*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="PageTitle" Margin="24,10,0,0" Style="{StaticResource PhoneTextTitle1Style}" Tap="PageTitle_Tap" FontFamily="Segoe WP Light" FontSize="62" />
+        <ScrollViewer Name="scrollViewer1" Grid.Row="1" Margin="10,0,0,0">
+            <StackPanel HorizontalAlignment="Left" Name="stackPanel1" VerticalAlignment="Top" Width="433" Grid.RowSpan="2"></StackPanel>
+        </ScrollViewer>
+    </Grid>
+</phone:PhoneApplicationPage>
